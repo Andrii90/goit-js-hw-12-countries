@@ -6,8 +6,7 @@ import clearContainer from './clearContainer';
 refs.searchForm.addEventListener('input',debounce(formSearch,500));
 
 
-function formSearch(event) {
-  clearContainer();
+
   function formSearch(event) {
     clearContainer();
     const inputValue=event.target.value.trim();
