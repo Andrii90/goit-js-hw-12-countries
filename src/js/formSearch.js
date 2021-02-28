@@ -7,13 +7,20 @@ refs.searchForm.addEventListener('input',debounce(formSearch,500));
 
 
 function formSearch(event) {
-
-  const inputValue=event.target.value;
-  console.log(inputValue);
-  fetchCountries(inputValue);
-  if(!inputValue) {
+  clearContainer();
+  function formSearch(event) {
     clearContainer();
-    return;
+    const inputValue=event.target.value.trim();
+    if(inputValue) {
+      fetchCountries(inputValue);
+    }
   }
-}
+  // const inputValue=event.target.value;
+  // console.log(inputValue);
+  // fetchCountries(inputValue);
+  // if(!inputValue) {
+  //   clearContainer();
+  //   return;
+//   }
+// }
 export default formSearch;
